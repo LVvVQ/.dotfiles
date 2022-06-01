@@ -1,0 +1,5 @@
+dwm
+dwm-msg
+*.o
+*.orig
+*.rej
