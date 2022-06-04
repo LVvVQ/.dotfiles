@@ -41,7 +41,7 @@ dist: clean
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp -f dwm dwm-msg ${DESTDIR}${PREFIX}/bin
+	cp -f dwm dwmc dwm-msg ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm-msg
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
