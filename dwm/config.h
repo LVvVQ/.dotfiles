@@ -98,7 +98,12 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-static const char *roficmd[] = { "/home/lvvvq/.config/polybar/forest/scripts/launcher.sh", NULL };
+static const char *asrootcmd[] = { "/home/lvvvq/.config/rofi/bin/asroot", NULL };
+static const char *launchercmd[] = { "/home/lvvvq/.config/rofi/bin/launcher", NULL };
+static const char *layoutscmd[] = { "/home/lvvvq/.config/rofi/bin/layouts", NULL };
+static const char *mpdcmd[] = { "/home/lvvvq/.config/rofi/bin/mpd", NULL };
+static const char *powercmd[] = { "/home/lvvvq/.config/rofi/bin/powermenu", NULL };
+static const char *screenshotcmd[] = { "/home/lvvvq/.config/rofi/bin/screenshot", NULL };
 static const char *wpcmd[] = { "/home/lvvvq/Scripts/wp-change.sh", NULL };
 static const char *chromecmd[]  = { "google-chrome-stable", "--proxy-server=127.0.0.1:8889",  NULL };
 
@@ -107,7 +112,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_m,      togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY,                       XK_space,  spawn,          {.v = roficmd } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = asrootcmd } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = launchercmd } },
+	{ MODKEY,                       XK_z,      spawn,          {.v = layoutscmd } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mpdcmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powercmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = wpcmd } },
   { MODKEY,                       XK_c,      spawn,          {.v = chromecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
