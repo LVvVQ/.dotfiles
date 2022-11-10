@@ -2,7 +2,7 @@ return {
   settings = {
     cmd = { "vscode-eslint-language-server", "--stdio" },
     filetype = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte" },
-    handlers = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte" },
+    root_dir = 'root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")',
     codeAction = {
       disableRuleComment = {
         enable = true,
