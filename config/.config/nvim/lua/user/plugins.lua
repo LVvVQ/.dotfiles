@@ -50,7 +50,7 @@ return packer.startup(function(use)
   use 'kdheepak/lazygit.vim'
   use 'lambdalisue/suda.vim'
   use 'lunarvim/colorschemes'
-  -- use 'sainnhe/sonokai'
+  use 'sainnhe/sonokai'
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
   use 'vim-airline/vim-airline'

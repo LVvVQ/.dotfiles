@@ -242,7 +242,7 @@ cmp_config = {
     -- TODO: potentially fix emmet nonsense
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.select_next_item()
+        cmp.confirm()
       elseif luasnip.expandable() then
         luasnip.expand()
       elseif jumpable(1) then
@@ -273,22 +273,7 @@ cmp_config = {
 
     ["<C-p>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping(function(fallback)
-      if cmp.visible() and cmp.confirm(cmp_config.confirm_opts) then
-        if jumpable(1) then
-          luasnip.jump(1)
-        end
-        return
-      end
-
-      if jumpable(1) then
-        if not luasnip.jump(1) then
-          fallback()
-        end
-      else
-        fallback()
-      end
-    end),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   },
 }
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
