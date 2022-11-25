@@ -41,13 +41,7 @@ local function config_debuggers()
   -- config per launage
   require("user.dap.vsc-cpp")
   require("user.dap.debugpy")
-  -- require("user.dap.di-cpp")
-  -- require("user.dap.dap-go")
-  -- require("user.dap.di-go")
-  -- require ("user.dap.di-python")
-  -- require("config.dap.python").setup()
-  -- require("config.dap.rust").setup()
-  -- require("config.dap.go").setup()
+  require("user.dap.vscode-go")
 
 end
 
