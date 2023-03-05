@@ -93,7 +93,7 @@ keymap("n", "<C-g>", "<cmd>LazyGit<CR>", opts)
 -- telescope --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
-keymap("n", "<leader>frg", "<cmd>lua require('telescope').extensions.live_grep_raw.live_grep_raw()<CR>", opts)
+keymap("n", "<leader>frg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_raw()<CR>", opts)
 keymap("n", "<leader>fm", "<cmd>Telescope media_files<CR>", opts)
 keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
 
