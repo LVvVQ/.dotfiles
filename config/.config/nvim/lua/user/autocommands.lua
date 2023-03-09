@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 
   augroup _general_settings
       autocmd!
@@ -26,4 +26,8 @@ vim.cmd [[
       autocmd FileType markdown setlocal spell
   augroup end
 
-]]
+  augroup jdtls_lsp
+      autocmd!
+      autocmd FileType java lua require'user.lsp.jdtls_setup'.setup()
+  augroup end
+]])

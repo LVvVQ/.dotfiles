@@ -94,6 +94,7 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- enable LSP
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
   use "tami5/lspsaga.nvim"
+  use 'mfussenegger/nvim-jdtls'
 
   -- Telescope --
   use 'nvim-telescope/telescope.nvim'

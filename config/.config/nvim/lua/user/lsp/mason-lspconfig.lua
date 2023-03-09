@@ -13,5 +13,6 @@ require("mason-lspconfig").setup({
     "stylelint_lsp",
     "tsserver",
     "volar",
+    "jdtls"
   },
 })
