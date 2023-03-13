@@ -3,7 +3,7 @@ local M = {}
 function M.setup()
 	local on_attach = function(client, bufnr)
 		require("jdtls.setup").add_commands()
-		require("jdtls").setup_dap()
+		require("jdtls").setup_dap({ hotcodereplace = "auto" })
 		require("lsp-status").register_progress()
 		require("compe").setup({
 			enabled = true,
@@ -74,7 +74,7 @@ function M.setup()
 		},
 		capabilities = capabilities,
 		on_attach = on_attach,
-    root_dir = root_dir,
+		root_dir = root_dir,
 	}
 
 	config.settings = {
@@ -160,12 +160,19 @@ function M.setup()
 	--     end
 	--   end
 	-- end
-
+	local bundles = {
+		vim.fn.glob(
+			"/home/lvvvq/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-0.44.0.jar",
+			1
+		),
+	}
+	vim.list_extend(bundles, vim.split(vim.fn.glob("/home/lvvvq/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n"))
 	local extendedClientCapabilities = require("jdtls").extendedClientCapabilities
 	extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 	config.init_options = {
 		-- bundles = bundles;
 		extendedClientCapabilities = extendedClientCapabilities,
+		bundles = bundles,
 	}
 
 	-- UI

@@ -102,3 +102,8 @@ require("lspconfig")["yamlls"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+require("mason-nvim-dap").setup({
+    automatic_setup = true,
+})
+require 'mason-nvim-dap'.setup_handlers {}

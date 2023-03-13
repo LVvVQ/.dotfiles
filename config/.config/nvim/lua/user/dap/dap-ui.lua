@@ -23,16 +23,22 @@ dapui.setup({
         'stacks',
         'watches',
       },
-      size = 40,
+      size = 30,
       position = 'left',
     },
     {
       elements = {
-        'repl',
         'console',
       },
-      size = 5,
+      size = 15,
       position = 'bottom',
+    },
+    {
+      elements = {
+        'repl',
+      },
+      size = 30,
+      position = 'right',
     },
   },
   floating = {
