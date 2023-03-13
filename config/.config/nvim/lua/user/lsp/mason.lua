@@ -97,3 +97,8 @@ require("lspconfig")["stylelint_lsp"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+require("lspconfig")["yamlls"].setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
