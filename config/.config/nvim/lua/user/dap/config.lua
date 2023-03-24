@@ -42,6 +42,7 @@ local function config_debuggers()
   require("user.dap.vsc-cpp")
   require("user.dap.debugpy")
   require("user.dap.vscode-go")
+  require("user.dap.java-debug-adapter")
 
 end
 

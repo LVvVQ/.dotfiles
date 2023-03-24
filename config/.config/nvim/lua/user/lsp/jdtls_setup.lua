@@ -5,6 +5,7 @@ function M.setup()
 		require("jdtls.setup").add_commands()
 		require("jdtls").setup_dap({ hotcodereplace = "auto" })
 		require("lsp-status").register_progress()
+		require("jdtls.dap").setup_dap_main_class_configs()
 		require("compe").setup({
 			enabled = true,
 			autocomplete = true,
@@ -53,6 +54,7 @@ function M.setup()
 	local root_markers = { "pom.xml", ".git", "gradlew", "mvnw" }
 	local root_dir = require("jdtls.setup").find_root(root_markers)
 	local home = os.getenv("HOME")
+	local lombok = "/home/lvvvq/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 
 	local capabilities = {
 		workspace = {
@@ -128,6 +130,7 @@ function M.setup()
 		"-Declipse.product=org.eclipse.jdt.ls.core.product",
 		"-Dlog.protocol=true",
 		"-Dlog.level=ALL",
+		"-javaagent:" .. lombok,
 		"-Xmx4g",
 		"--add-modules=ALL-SYSTEM",
 		"--add-opens",
@@ -166,7 +169,10 @@ function M.setup()
 			1
 		),
 	}
-	vim.list_extend(bundles, vim.split(vim.fn.glob("/home/lvvvq/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n"))
+	vim.list_extend(
+		bundles,
+		vim.split(vim.fn.glob("/home/lvvvq/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n")
+	)
 	local extendedClientCapabilities = require("jdtls").extendedClientCapabilities
 	extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 	config.init_options = {
