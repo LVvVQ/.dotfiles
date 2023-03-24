@@ -7,6 +7,7 @@ vim.cmd([[
       autocmd BufCreate *  :silent !fcitx5-remote -c
       autocmd BufEnter *  :silent !fcitx5-remote -c
       autocmd BufLeave *  :silent !fcitx5-remote -c
+      autocmd VimEnter * highlight Visual guibg=#4e4e4e
   augroup end
 
   augroup _nvim-tree
