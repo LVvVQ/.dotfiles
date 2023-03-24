@@ -95,6 +95,7 @@ return packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
   use "tami5/lspsaga.nvim"
   use 'mfussenegger/nvim-jdtls'
+  use 'github/copilot.vim'
 
   -- Telescope --
   use 'nvim-telescope/telescope.nvim'
