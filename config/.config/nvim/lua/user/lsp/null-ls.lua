@@ -12,6 +12,7 @@ local sources = {
 	formatting.clang_format,
 	formatting.stylelint,
 	formatting.prettier,
+	formatting.xmlformat,
 
 	--[[ code actions ]]
 	code_actions.eslint_d,
