@@ -74,6 +74,7 @@ return packer.startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown", cmd = 'MarkdownPreview' }, })
   use { 'phaazon/hop.nvim', branch = 'v1', }
   use { 'goolord/alpha-nvim', config = function() require 'alpha'.setup(require 'alpha.themes.dashboard'.config) end }
+  use 'rcarriga/nvim-notify'
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp' -- The completion plugin
