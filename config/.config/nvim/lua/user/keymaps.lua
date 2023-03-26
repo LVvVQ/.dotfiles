@@ -124,7 +124,8 @@ keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint
 keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
 
 -- translator --
-keymap("n", "ts", "<cmd>TranslateW<CR>", opts)
+keymap("n", "ts", "<cmd>Translate zh-CN<CR>", opts)
+keymap("x", "ts", "<cmd>Translate zh-CN<CR>", opts)
 
 -- winshift --
 keymap("n", "<C-W>m", ":WinShift<cr>", opts)

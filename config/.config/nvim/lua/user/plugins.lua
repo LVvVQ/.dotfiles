@@ -65,7 +65,6 @@ return packer.startup(function(use)
   use 'folke/todo-comments.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'ray-x/lsp_signature.nvim'
-  use 'voldikss/vim-translator'
   use 'sindrets/winshift.nvim'
   use 'simrat39/symbols-outline.nvim'
   use 'tpope/vim-speeddating'
@@ -75,6 +74,7 @@ return packer.startup(function(use)
   use { 'phaazon/hop.nvim', branch = 'v1', }
   use { 'goolord/alpha-nvim', config = function() require 'alpha'.setup(require 'alpha.themes.dashboard'.config) end }
   use 'rcarriga/nvim-notify'
+  use 'uga-rosa/translate.nvim'
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp' -- The completion plugin
