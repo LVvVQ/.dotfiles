@@ -162,6 +162,12 @@ telescope.setup {
       case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       -- the default case_mode is "smart_case"
     },
+
+    rooter = {
+       enable = true,
+       patterns = { ".git", "pom.xml", "mvnw", "gradlew", },
+       debug = false
+    }
   },
 }
 
@@ -170,3 +176,4 @@ telescope.load_extension('fzf')
 telescope.load_extension('neoclip')
 telescope.load_extension('ui-select')
 telescope.load_extension('media_files')
+telescope.load_extension('rooter')

@@ -105,6 +105,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-ui-select.nvim'
   use 'nvim-telescope/telescope-live-grep-raw.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', }
+  use 'desdic/telescope-rooter.nvim'
 
   -- Treesitter --
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', }
