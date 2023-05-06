@@ -5,11 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=21:antialias=true:autohint=true:style=Bold";
+static char *font = "Hack Nerd Font Mono:pixelsize=21:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
   "Font Awesome 6 Free Solid:pixelsize=22:antialias=true:autohint=true:style:Solid",
-  "Hack Nerd Font:pixelsize=21:antialias=true:autohint=true:style=Bold"
 };
 
 static int borderpx = 2;
