@@ -5,7 +5,7 @@
  */
 
 configuration {
-	font:							    "Hack Nerd Font 14";
+	font:							    "Hack Nerd Font Mono 14";
   show-icons:           true;
 	icon-theme: 					"Papirus";
   display-drun: 				" ";

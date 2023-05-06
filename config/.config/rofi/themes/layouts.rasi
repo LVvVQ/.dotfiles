@@ -2,7 +2,7 @@
 /* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
 
 configuration {
-    font:                           "Hack Nerd Font 11";
+    font:                           "Hack Nerd Font Mono 11";
     show-icons:                     false;
     display-drun: 					"";
     drun-display-format:            "{icon} {name}";
