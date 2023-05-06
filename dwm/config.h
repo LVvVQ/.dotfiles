@@ -15,8 +15,8 @@ static const int usealtbar          = 1;        /* 1 means use non-dwm status ba
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
 static const char *altbarcmd        = "$HOME/bar.sh"; /* Alternate bar launch command */
-static const char *fonts[]          = { "Hack Nerd Font:size=10" };
-// static const char dmenufont[]       = "Hack Nerd Font:size=10";
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=10" };
+// static const char dmenufont[]       = "Hack Nerd Font Mono:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
