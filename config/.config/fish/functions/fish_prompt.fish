@@ -67,12 +67,12 @@ function fish_prompt
 
     # [luke@core ~] ( master)
     # Gruvbox theme color [https://github.com/morhetz/gruvbox]
-    set -l red (set_color -o fb4934)
-    set -l yellow (set_color -o fabd2f)
-    set -l green (set_color -o b8bb26)
-    set -l blue (set_color -o 83a598)
-    set -l purple (set_color -o d3869b)
-    set -l branch_red (set_color -o CD6090)
+    set -l red (set_color fb4934)
+    set -l yellow (set_color fabd2f)
+    set -l green (set_color b8bb26)
+    set -l blue (set_color 83a598)
+    set -l purple (set_color d3869b)
+    set -l branch_red (set_color CD6090)
 
     set -l arrow_color "$green"
     if test $__last_command_exit_status != 0
