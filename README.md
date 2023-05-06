@@ -5,6 +5,14 @@
 
 After I clone this repository, I can use `stow`(A manage tool, you can use package manager to install it) to link the configuration files to the corresponding directories.
 
+## Dependices
+- [Hack Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack)
+- rg
+- fd
+- stow
+- FZF
+- Lazygit
+
 ## Components
 - neovim    (Text editor)
 - ranger    (Terminal file manager)
@@ -27,28 +35,23 @@ git clone https://github.com/LVvVQ/.dotfiles
 ### neovim
 > Install Plugins
 
-Use `nvim` to open `.dotfiles/config/.config/nvim/lua/user/plugins.lua` file, and then execute `:PackerSync` to install plugins.
+I use [lazy.nvim](https://github.com/folke/lazy.nvim) to manage plugins, so when you open Neovim for the first time, Neovim will automatically download lazy.nvim, and automatically download the plugins after successful download. 
 
-> Install LSP server
+After the plugins are downloaded successfully, you should see Tressitter start downloading Language Parsers, or you can use the `:TSInstallSync` command to install them manually.
 
-Then use `:LspInstall` or `:LspInstallInfo` (nvim commands) to install the language service protocol you need.
+After that, when you type the command `:Mason`, [Mason](https://github.com/williamboman/mason.nvim) will start downloading Language Server automatically.
 
-> Install debug adapter
-
-Use `:DIInstall` (nvim command) to install the debug adapter you need. The debug adapter debugging for `dap` plugin.
-
-After downloading the debug adapter, you also need to **create configuration file** for the corresponding language in the `nvim/lua/user/dap` directory, and update the `config_debugger()` function of the `nvim/lua/user/dap/config.lua` file at the same time.
-
-NOTE: If you fail to download debug adapter by `:DIInstall`, you can go to [nvim-dap](https://github.com/mfussenegger/nvim-dap) and check the [Debug Adapter installation wiki](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) to download debug adapter manually.The default download path of `:DIInstall` is `~/.local/share/nvim/dapinstall`.
+And if everything goes well, you should have a brand new Neovim when you close and open Neovim again.
 
 ------
 
 ### ranger
 > Install ranger_devicons plug
 
-You need to download the [devicons plugin](https://github.com/alexanderjeurissen/ranger_devicons) into `~/.config/ranger/plugins/ranger_devicons`:
+You need to download the [devicons](https://github.com/alexanderjeurissen/ranger_devicons) and [zoxide](https://github.com/jchook/ranger-zoxide) into `~/.config/ranger/plugins/`:
 ```shell
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+git clone https://github.com/jchook/ranger-zoxide ~/.config/ranger/plugins/zoxide
 ```
 
 ------
@@ -95,12 +98,5 @@ stow -vDt ~ *
 ```
 
 For specific usage of `stow`, please check `man stow`.
-
-## Extra tools
-- rg
-- fd
-- stow
-- FZF
-- Lazygit
 
 ## 😄HAPPY ENDING😆

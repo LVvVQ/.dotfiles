@@ -1,0 +1,21 @@
+{
+  "Vue Single File Component Setup Composition API with Typescript": {
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "\t\t$0",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<style scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File Setup Composition API - Typescript"
+  }
+}

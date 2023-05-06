@@ -1,0 +1,12 @@
+{
+  "Mysql datasource": {
+    "prefix": "datasource",
+    "body": [
+      "datasource:",
+      "\tdirver-class-name: com.mysql.cj.jdbc.Driver",
+      "\tpassword: ${1:password}",
+      "\turl: jdbc:mysql://localhost:3306/${2:database}?serverTimezone=UTC",
+      "\tusername: ${3:username}"
+    ]
+  }
+}
