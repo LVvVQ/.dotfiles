@@ -108,6 +108,7 @@ static const char *screenshotcmd[] = { "/home/lvvvq/.config/rofi/bin/screenshot"
 static const char *wpcmd[] = { "/home/lvvvq/Scripts/wp-change.sh", NULL };
 static const char *chromecmd[]  = { "google-chrome-stable", "--proxy-server=127.0.0.1:8889",  NULL };
 
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -124,6 +125,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_l,      movestack,      {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_h,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_Left,   setmfact,       {.f = -0.05} },
