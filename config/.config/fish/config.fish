@@ -42,3 +42,10 @@ if status is-interactive
                           --bind ctrl-j:down,ctrl-k:up --preview "ccat --color=always {} || highlight -O ansi -l {} || cat {} 2> /dev/null | head -500"'
 
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/lvvvq/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
