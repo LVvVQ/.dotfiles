@@ -24,7 +24,8 @@ return {
         dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
         dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-        dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
+        dashboard.button("g", "  Find text", ":Telescope live_grep <CR>"),
+        dashboard.button("t", "󰙅  Neotree", ":Neotree<CR>"),
         dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
         dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
       }
