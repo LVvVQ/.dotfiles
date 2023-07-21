@@ -8,5 +8,18 @@
       "\turl: jdbc:mysql://localhost:3306/${2:database}?serverTimezone=UTC",
       "\tusername: ${3:username}"
     ]
+  },
+  "Spring Data JPA": {
+    "prefix": "jpa",
+    "body": [
+      "jpa:",
+      "\tgenerate-ddl: true",
+      "\tshow-sql: true",
+      "\thibernate:",
+      "\t\tddl-auto: update",
+      "\tproperties:",
+      "\t\thibernate:",
+      "\t\t\tformat_sql: true"
+    ]
   }
 }
