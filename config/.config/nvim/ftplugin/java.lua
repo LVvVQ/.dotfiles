@@ -162,7 +162,7 @@ config.cmd = {
   "--add-opens",
   "java.base/java.lang=ALL-UNNAMED",
   "-jar",
-  vim.fn.stdpath("data") .. "/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+  vim.fn.glob(vim.fn.stdpath("data") .. "/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
   "-configuration",
   vim.fn.stdpath("data") .. "/mason/packages/jdtls/config_linux",
   "-data",
