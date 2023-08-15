@@ -42,10 +42,10 @@ return {
             node_decremental = "<bs>",
           },
         },
-        rainbow = {
-          enable = true,
-          query = 'rainbow-parens',
-        },
+        --[[ rainbow = { ]]
+        --[[   enable = true, ]]
+        --[[   query = 'rainbow-parens', ]]
+        --[[ }, ]]
         textobjects = {
           select = {
             enable = true,

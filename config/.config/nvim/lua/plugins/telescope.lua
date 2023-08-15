@@ -95,6 +95,8 @@ return {
       telescope.load_extension("lazygit")
       telescope.load_extension("projects")
       telescope.load_extension("ui-select")
+      telescope.load_extension("notify")
+      telescope.load_extension("noice")
     end
   }
 }
