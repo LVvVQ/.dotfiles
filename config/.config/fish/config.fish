@@ -2,7 +2,7 @@ if status is-interactive
   # Commands to run in interactive sessions can go here
 
   #NOTE: See detail https://github.com/sebastiencs/icons-in-terminal
-  source ~/.local/share/icons-in-terminal/icons.fish
+  #source ~/.local/share/icons-in-terminal/icons.fish
 
   # Emulates vim's cursor shape behavior
   # Set the normal and visual mode cursors to a block
@@ -18,7 +18,6 @@ if status is-interactive
   # alias
   alias vim="nvim"
   alias cat="ccat"
-  alias ra="ranger"
   alias s="neofetch"
   alias lg="lazygit"
   alias sudo="sudo -E"
@@ -49,3 +48,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
