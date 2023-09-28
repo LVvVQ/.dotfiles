@@ -124,6 +124,18 @@ return {
     build = "cd app && pnpm install",
     ft = { "markdown" },
     cmd = { "MarkdownPreview", "MarkdownPreviewStop" },
+    init = function()
+      vim.cmd([[
+        let g:mkdp_open_to_the_world = 1
+        let g:mkdp_open_ip = '192.168.56.101'
+        let g:mkdp_port = 6060
+
+        function OpenMarkdownPreview(url)
+          execute 'silent ! lemonade open ' . a:url
+        endfunction
+        let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+      ]])
+    end,
     config = function()
       vim.fn["mkdp#util#install"]()
     end,
