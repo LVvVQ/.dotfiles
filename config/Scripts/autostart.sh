@@ -3,6 +3,6 @@
 /bin/bash ~/.config/polybar/mybar/launch.sh &
 /bin/bash ~/Scripts/wp-change.sh &
 picom -b 
-xmodmap ~/.xmodmap
+xmodmap ~/.Xmodmap
 fcitx5 &
 dunst &
