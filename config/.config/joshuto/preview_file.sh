@@ -176,7 +176,7 @@ handle_mime() {
             exit 1 ;;
 
             ## Text
-        text/* | */xml)
+        text/* | */xml | application/*)
             bat --color=always --paging=never \
                 --style=plain \
                 --terminal-width="${PREVIEW_WIDTH}" \
