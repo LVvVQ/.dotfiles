@@ -13,6 +13,13 @@
           "vue"
         ],
         "path": "./snippets/vue.json"
+      },
+      {
+        "language": [
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./snippets/react.json"
       }
     ]
   }
