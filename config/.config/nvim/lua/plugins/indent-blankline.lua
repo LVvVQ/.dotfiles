@@ -3,7 +3,7 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require("indent_blankline").setup {
+      require("ibl").setup {
         space_char_blankline = " ",
         filetype_exclude = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy" },
         show_trailing_blankline_indent = false,
