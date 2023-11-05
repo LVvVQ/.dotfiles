@@ -102,5 +102,5 @@ function fish_prompt
     # echo -n -s $blue [$normal c$red @ $normal m$blue] ' ' $arrow $cwd $repo_info $normal ' '
 
     # [luke@core ~] ( master)
-    echo -n -s $red [$yellow luke$green @ $blue core ' '$cwd $red ] $repo_info $normal ' '
+    echo -n -s $red [$yellow lvvvq$green @ $blue arch ' '$cwd $red ] $repo_info $normal ' '
 end

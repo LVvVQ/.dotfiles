@@ -17,11 +17,12 @@ if status is-interactive
 
   # alias
   alias vim="nvim"
-  alias cat="ccat"
   alias s="neofetch"
   alias lg="lazygit"
+  alias ld="lazydocker"
   alias sudo="sudo -E"
-  alias setproxy="set -gx ALL_PROXY http://127.0.0.1:8889"
+  alias ra="ranger"
+  alias setproxy="set -gx ALL_PROXY http://192.168.1.1:10809"
   alias unsetproxy="set -e ALL_PROXY"
 
   # Open comment when all terminal need proxy
@@ -38,7 +39,7 @@ if status is-interactive
                           --color=dark
                           --color=fg:-1,bg:-1,hl:#73d0ff,fg+:-1,bg+:-1,hl+:#ff87d7,border:#af87ff
                           --color=info:#af87ff,prompt:#73d0ff,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
-                          --bind ctrl-j:down,ctrl-k:up --preview "ccat --color=always {} || highlight -O ansi -l {} || cat {} 2> /dev/null | head -500"'
+                          --bind ctrl-j:down,ctrl-k:up --preview "bat --color=always --style=numbers --line-range=:500 {} || highlight -O ansi -l {} || cat {} 2> /dev/null | head -500"'
 
 end
 
